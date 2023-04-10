@@ -143,6 +143,8 @@ shinyServer(function(input, output, session) {
     # Display Masters leaderboard
     output$masters_leaderboard_display <- renderRHandsontable({
         rhandsontable(display_leaderboard$leaderboard,
+                      scrollV = "auto",
+                      scrollH = "auto",
                       overflow = "visible") %>%
             hot_table(readOnly = TRUE)
     })
